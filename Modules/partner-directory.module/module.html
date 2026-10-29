@@ -1,0 +1,19 @@
+{% set heading_id = name ~ "-heading" %}
+{% set status_id = name ~ "-status" %}
+
+<section
+  class="partner-directory"
+  data-feed-url="{{ module.feed_url|escape_url }}"
+  data-error-message="{{ module.error_message|escape }}"
+>
+  <p
+    class="partner-directory__status"
+    id="{{ status_id }}"
+    role="status"
+    aria-live="polite"
+  >
+    {{ module.loading_message }}
+  </p>
+
+  <ul class="partner-directory__list" hidden></ul>
+</section>

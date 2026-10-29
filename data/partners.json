@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "id": "p-101",
+      "name": "Northwind Systems",
+      "tier": "Gold",
+      "regions": ["North America", "EMEA"],
+      "website": "https://northwind.example",
+      "email": "partners@northwind.example"
+    },
+    {
+      "id": "p-102",
+      "name": "Contoso IT",
+      "tier": "Silver",
+      "regions": ["APAC"],
+      "website": "https://contoso.example",
+      "email": "hello@contoso.example"
+    },
+    {
+      "id": "p-103",
+      "name": "Fabrikam",
+      "tier": "Platinum",
+      "regions": ["DACH", "United Kingdom"],
+      "website": "https://fabrikam.example",
+      "email": "info@fabrikam.example"
+    },
+    {
+      "id": "p-104",
+      "name": "Adatum Corp",
+      "tier": "Silver",
+      "regions": ["Latin America"],
+      "website": "https://adatum.example",
+      "email": "sales@adatum.example"
+    }
+  ]
+}

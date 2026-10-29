@@ -1,0 +1,87 @@
+[
+  {
+    "name": "heading",
+    "label": "Section heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "inline_help_text": "Optional heading displayed above this FAQ.",
+    "default": "Frequently asked questions"
+  },
+  {
+    "name": "style",
+    "label": "Visual style",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      ["minimal", "Minimal"],
+      ["cards", "Cards"]
+    ],
+    "type": "choice",
+    "inline_help_text": "Applies only to this module instance.",
+    "default": "minimal"
+  },
+  {
+    "name": "open_first",
+    "label": "Open first item by default",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "inline_help_text": "When enabled, the first question starts expanded.",
+    "default": true
+  },
+  {
+    "name": "items",
+    "label": "FAQ items",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "sorting_label_field": "question",
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "question",
+        "label": "Question",
+        "required": true,
+        "locked": false,
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "answer",
+        "label": "Answer",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "enabled_features": [
+          "standard_emphasis",
+          "block",
+          "link",
+          "image",
+          "lists"
+        ],
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "question": "Question #1?",
+        "answer": "<p>Question #1 answer text</p>"
+      },
+      {
+        "question": "Question #2?",
+        "answer": "<p>Question #2 answer text</p>"
+      },
+      {
+        "question": "Question #3?",
+        "answer": "<p>Question #3 answer text</p>"
+      }
+    ]
+  }
+]

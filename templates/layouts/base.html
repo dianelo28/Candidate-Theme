@@ -1,0 +1,25 @@
+<!--
+  templateType: none
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_meta.html_title }}</title>
+    {% if page_meta.meta_description %}
+      <meta name="description" content="{{ page_meta.meta_description }}">
+    {% endif %}
+    {{ require_css(get_asset_url("../../css/theme.css")) }}
+    {{ standard_header_includes }}
+  </head>
+  <body class="{{ builtin_body_classes }}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% global_partial path="../partials/header.html" %}
+    <main id="main-content">
+      {% block body %}{% endblock body %}
+    </main>
+    {% global_partial path="../partials/footer.html" %}
+    {{ standard_footer_includes }}
+  </body>
+</html>

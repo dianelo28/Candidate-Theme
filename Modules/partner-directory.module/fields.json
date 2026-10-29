@@ -1,0 +1,26 @@
+[
+  {
+    "name": "feed_url",
+    "label": "Partner feed URL",
+    "required": true,
+    "locked": false,
+    "type": "text",
+    "default": "/partner-directory.module/data/partners.json"
+  },
+  {
+    "name": "loading_message",
+    "label": "Loading message",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Loading partners…"
+  },
+  {
+    "name": "error_message",
+    "label": "Error message",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Partner data could not be loaded. Please try again later."
+  }
+]

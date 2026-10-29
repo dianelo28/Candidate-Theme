@@ -1,0 +1,146 @@
+[
+  {
+    "name": "heading",
+    "label": "Section heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "inline_help_text": "Optional heading displayed above the resource cards.",
+    "default": "Resources"
+  },
+  {
+    "name": "cards",
+    "label": "Cards",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "sorting_label_field": "title",
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "image",
+        "label": "Image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "show_loading": true,
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": "",
+          "width": null,
+          "height": null
+        }
+      },
+      {
+        "name": "tag",
+        "label": "Tag",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          ["Ebook", "Ebook"],
+          ["Case study", "Case study"],
+          ["Webinar", "Webinar"]
+        ],
+        "type": "choice",
+        "default": "Ebook"
+      },
+      {
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "description",
+        "label": "Short description",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "link",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG"],
+        "show_advanced_rel_options": true,
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": [
+      {
+        "image": {
+          "src": "",
+          "alt": ""
+        },
+        "tag": "Ebook",
+        "title": "A practical guide to adaptive enablement",
+        "description": "Learn how teams use structured playbooks to onboard faster and stay consistent.",
+        "link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "#"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "image": {
+          "src": "",
+          "alt": ""
+        },
+        "tag": "Case study",
+        "title": "How Northwind grew pipeline with partner enablement",
+        "description": "See how a mid-market team shortened ramp time and improved win rates.",
+        "link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "#"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "image": {
+          "src": "",
+          "alt": ""
+        },
+        "tag": "Webinar",
+        "title": "Enablement that scales with your product",
+        "description": "A live walkthrough of content, coaching, and measurement that actually sticks.",
+        "link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "#"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  }
+]

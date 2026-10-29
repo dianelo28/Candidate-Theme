@@ -1,0 +1,55 @@
+.hero {
+  padding-block: 2rem;
+  background: var(--brand-surface);
+}
+
+.hero__inner {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.hero__headline {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 6vw, 3rem);
+  line-height: 1.15;
+  font-weight: 750;
+}
+
+.hero__subheadline {
+  margin: 0 0 1.5rem;
+  color: var(--brand-muted);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+.hero__form {
+  max-width: 28rem;
+}
+
+.hero__media img,
+.hero__media .hs-image-widget {
+  display: block;
+  width: 100%;
+  border-radius: var(--brand-radius);
+  box-shadow: var(--brand-shadow);
+}
+
+.landing-content {
+  padding-block: 0.5rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-block: 4rem;
+  }
+
+  .hero__inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .hero__subheadline {
+    font-size: 1.125rem;
+  }
+}

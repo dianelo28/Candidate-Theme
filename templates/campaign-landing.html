@@ -1,0 +1,52 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Campaign landing page
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero__inner">
+        <div class="hero__media">
+            {% image "hero_image"
+              label="Hero image",
+              alt="Campaign visual",
+              width="720",
+              loading="eager"
+            %}
+          </div>
+        <div class="hero__copy">
+            <h1 class="hero__headline" id="hero-heading">
+                {% text "hero_headline"
+                label="Headline",
+                value="Title"
+                %}
+            </h1>
+        <p class="hero__subheadline">
+          {% textarea "hero_subheadline"
+            label="Subheadline",
+            value="Some subheadline text"
+          %}
+        </p>
+        <div class="hero__form">
+          {% module "lead_form"
+            path="@hubspot/form",
+            label="Lead capture form"
+          %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% dnd_area "below_hero", label="Content below hero", class="landing-content" %}
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../resource-cards" %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+{% endblock body %}
